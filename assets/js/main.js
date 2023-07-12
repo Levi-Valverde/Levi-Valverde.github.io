@@ -10,12 +10,12 @@ form.addEventListener('submit', function (e) {
   const altura = Number(inputAltura.value);
 
   if (!peso) {
-    setResultado('Peso inválido', false);
+    setResultado('Invalid weight', false);
     return;
   }
 
   if (!altura) {
-    setResultado('Altura inválida', false);
+    setResultado('Invalid height', false);
     return;
   }
 
@@ -28,8 +28,7 @@ form.addEventListener('submit', function (e) {
 });
 
 function getNivelImc (imc) {
-  const nivel = ['Abaixo do peso', 'Peso normal', 'Sobrepeso',
-    'Obesidade grau 1', 'Obesidade grau 2', 'Obesidade grau 3'];
+  const nivel = ['Under weight', 'Normal weight', 'Overweight', 'Grade 1 obesity', 'Grade 2 obesity',  'Grade 3 obesity'];
 
   if (imc >= 39.9) return nivel[5];
   if (imc >= 34.9) return nivel[4];
